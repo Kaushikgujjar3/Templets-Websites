@@ -1,0 +1,38 @@
+@media (min-width: 480px) and (max-width: 767px)
+{
+    .we-do h3
+    {
+        font-size: 25px !important;
+    }
+    .we-do p 
+    {
+        width: 91% !important;
+    }
+    .f-cont .c1
+    {
+        text-align: center;
+        margin: auto;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px)
+{
+    .we-do h3
+    {
+        font-size: 30px !important;
+    }
+    .we-do p 
+    {
+        width: 83% !important;
+    }
+    .slider-1 .contain p
+    {
+        width: 100%;
+        margin: 0;
+    }
+
+}
+
+
+
+
+

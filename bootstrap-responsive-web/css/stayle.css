@@ -1,0 +1,758 @@
+/* poppins-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/poppins-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* roboto-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto-v30-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+/* montserrat-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/montserrat-v25-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* montserrat-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/montserrat-v25-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  :root
+  {
+     --theme-color:#0067ED;
+     --dark:black;
+     --white:#fff;
+     --font:#333;
+     --Poppins:'Poppins', sans-serif;
+     --roboto:'roboto';
+     --montserrat:'Montserrat', sans-serif;
+     --dark-white:#f9f9f9;
+     --light-gray:#ababab;
+     --dark-gray:#888888;
+  }
+
+  /* ---------------------------------------------------------------------------------------------------------*/
+
+
+  /*----------------- Default css------------------- */
+
+*
+{
+  padding: 0;
+  margin: 0;
+}
+h1,h2,h3,h4,h4,h5,h6
+{
+  font-family: var(--montserrat);
+  font-weight: bold;
+}
+ul , ol
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+a
+{
+  text-decoration: none;
+  display: block;
+}
+body
+{
+  font-family:var(--Poppins);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+.spacery
+{
+  padding: 80px 0;  
+}
+.p-12
+{
+  padding: 0px -12px;
+}
+
+
+/* --------------------- custom css --------------------*/
+
+
+/* header */
+
+.top_header a
+{
+  color: var(--white);
+  font-size: 15px;
+  font-family:var(--roboto);
+  font-weight: 400;
+}
+.top_header .service li a
+{
+  transition: .4s;
+}
+.top_header .service li a:hover
+{
+  color: var(--font);
+}
+.top_header .info 
+{
+  padding: 0px 15px;
+}
+header
+{
+  background-color: var(--white);
+}
+
+/* nav */
+
+.main_menu li
+{
+  position: relative;
+}
+.main_menu > li:hover > a
+{
+  color: var(--theme-color);
+}
+.main_menu li a
+{ 
+  margin: 20px 15px;
+  color: black;
+  font-family: var(--Poppins);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: .4s;
+
+}
+.main_menu .serch i
+{
+  font-size: 16px;
+  color: black;
+}
+
+
+.main_menu li a i
+{
+  color: gray;
+  font-size: 12px;
+  margin-left:5px;
+}
+.main_menu li a button
+{
+  padding: 8px 15px;
+  border:none;
+  background-color:var(--theme-color);
+  border-radius: 5px;
+  color: var(--white);
+  transition: .5s;
+}
+.main_menu li a button:hover
+{
+  background-color: var(--font);
+}
+
+.sub_menu
+{
+  position: absolute;
+  width: 200px;
+  background-color:var(--white);
+  top: 110%;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: .1s;
+}
+.main_menu li:hover .sub_menu
+{
+  top: 100%;
+  visibility: visible;
+  opacity: 1;
+}
+.sub_menu li
+{
+  position: relative;
+  z-index: 44;
+  background-color:var(--white);
+
+}
+
+.sub_menu li a
+{
+  margin: 0;
+  padding: 10px 15px;
+  position: relative;
+  z-index: 33;
+}
+.sub_menu li::before
+{
+  content: '';
+  width: 0;
+  height: 100%;
+  background-color:var(--theme-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: .5s;
+}
+.sub_menu li:hover::before  
+{
+  width: 100%;
+}
+.sub_menu li:hover a{
+  color: var(--white);
+}
+
+
+/* Mobaile menu */
+
+.mo_menu
+{
+  background-color:var(--white);
+}
+.mo_menu a
+{
+  text-align: left;
+  font-size: 20px;
+}
+
+.btn-close
+{
+  position: absolute;
+  right: 0;
+  padding: 10px;
+}
+
+.s_menu li a
+{
+  color: var(--font);
+  text-align: center;
+  font-size: 16px;
+}
+.dropdown-toggle::after
+{
+  position: absolute;
+  right: 0;
+  align-items: center;
+  margin-top: 15px;
+}
+
+/* Slider  1 */
+
+.slider-1
+{
+  background: url(../images/slider-01.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 700px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+}
+.contain 
+{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.contain h2
+{
+  font-size: 63px;
+  line-height: 1;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: var(--montserrat);
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  transition: .5s;
+    margin-bottom: 5px;
+}
+.contain p
+{
+  width: 63%;
+  margin: 15px auto 15px auto;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: .9px;
+}
+.witr_btn
+{
+   border-radius: 5px;
+   color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    padding: 11px 24px;
+    text-align: center;
+    position: relative;
+    margin-right: 15px;
+    margin-top: 40px;
+    z-index: 2;
+    transition: 1s;
+    font-weight: 400;
+    font-family: var(--montserrat);
+}
+.witr_btn:hover
+{
+  background-color: #0067ED;
+}
+
+
+/* WHAT WE DO START */
+
+.we-do h3
+{
+  font-size: 38px;
+  color: var(--font);
+
+}
+.we-do h3 span
+{
+  color: var(--theme-color);
+}
+.we-do p
+{
+  width: 73%;
+  font-family: var(--Poppins);
+}
+.items
+{
+  font-family: var(--montserrat);
+}
+.items a i
+{
+  font-size: 25px;
+  border: 1px solid none;
+  border-radius: 50%;
+  padding: 12px;
+  /* box-shadow: 0 0 19px rgb(219, 216, 216); */
+  color: #333;
+}
+.items a .fa-mobile-screen-button
+{
+  border-radius: 50%;
+  padding: 12px 15px;
+}
+.items h3 a
+{
+  color: var(--font);
+  font-size: 20px;
+}
+.what-do
+{
+  transition: .5s;
+}
+.what-do p
+{
+  font-size: 14px;
+  /* width: 310px; */
+  margin-right: 0 !important;
+}
+
+.what-do:hover
+{
+  background-color: var(--theme-color);
+  color: var(--white);
+}
+.what-do:hover i
+{
+  background-color: #fff;
+  color: var(--theme-color);
+}
+.what-do:hover h3 a
+{
+  color: var(--white);
+}
+
+/* OUR SERVICE START */
+
+.our-service .plan::before
+{
+  content: "";
+}
+
+/* OUR SERVICE END */
+
+.services
+{
+  background-color: var(--dark-white);
+}
+.our-services
+{
+  padding: 40px 30px 25px 30px;
+transition: .5s;
+background: #fff;
+}
+.our-services .plan
+{
+  font-size: 26px;
+  color: var(--dark-gray);
+}
+.our-services h5 a
+{
+  color: var(--font);
+  font-family: var(--montserrat);
+  font-size: 18px;
+  transition: .5s;
+}
+.our-services h5 a:hover
+{
+  color: var(--theme-color);
+}
+
+.our-services p
+{
+  font-family: var(--Poppins);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color:var(--font);
+}
+.our-services:hover
+{
+  box-shadow: 0px 0px 25px var(--light-gray);
+}
+.img-box
+{
+  position: relative;
+}
+.box-cont
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 164, 231, 0.6);
+  top: 0;
+  left: 0;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  z-index: 44;
+  visibility: hidden;
+  opacity: 0;
+  transition: .4s;
+}
+.box-item
+{
+  transform: translatey(20px);
+  visibility: hidden;
+  opacity: 0;
+  transition: .7s;
+}
+.box-cont h4 a
+{
+  color: var(--white);
+  font-size: 22px;
+  opacity: 1;
+  transition: .3s;
+}
+.box-cont h4:hover a
+{
+  color: var(--theme-color);
+}
+
+.box-cont ul li
+{
+  color: white;
+  font-family: var(--montserrat);
+}
+.img-box:hover .box-cont 
+{
+  visibility: visible;
+  opacity: 1;
+}
+.img-box:hover .box-item
+{
+  transform: translatey(0px);
+  visibility: visible;
+  opacity: 1;
+  transition-delay:.2s;
+}
+/* OUR TEAM strat */
+
+.p-80
+{
+  padding-top:-80px !important;
+}
+.card
+{
+  border: none;
+  box-shadow: 0 0 15px rgb(221, 217, 217);
+}
+.card img
+{
+  height:290;
+  width: 270;
+}
+.card-title a
+{
+  color: var(--font);
+  transition: .4s;
+  font-size: 18px;
+}
+.card-title a:hover
+{
+  color: var(--theme-color);
+}
+.f
+{
+  color: #0067ED;
+}
+.icons ul li
+{
+   color: #ababab;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 17px;
+    line-height: 35px;
+    text-align: center;
+    margin: 0 3px;
+    border: 1px solid #ddd
+}
+.icons ul li a
+{
+  color: #ababab;
+  transition: .5s;
+  border-radius: 50%;
+
+}
+.icons ul li a:hover
+{
+  background-color: var(--theme-color);
+  border-radius: 50%;
+  color: var(--white);
+}
+
+
+/* OUR PRICING start */
+
+.list-group
+{
+  padding: 40px 0px 0px 0px;
+}
+.list-group-item
+{
+  border: none;
+}
+.list-group-item:nth-child(odd)
+{
+  background-color: #F9F9F9;
+}
+.list-group-item:nth-child(even)
+{
+  background-color: var(--white);
+}
+.card-priching
+{
+  border-bottom:3px solid #1293d4;
+  box-shadow: 0 0 15px lightgray;
+  margin-bottom: 20px;
+}
+.btn-primary
+{
+  border-radius: 40px;
+}
+.btn-primary:hover
+{
+  background-color:transparent;
+  color: #0067ED;
+}
+.card-img-top::before
+{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #1E67B0D9
+}
+
+/* HAPPY CLINET START */
+
+.h-clint
+{
+  background-image: url(../images/asset\ 32.jpeg);
+}
+.s-box
+{
+  background-color: var(--white);
+  padding: 50px 20px 20px 29px;
+  margin-top: 70px;
+}
+.s-box .s-img
+{
+  height: 90px;
+  width: 90px;
+  position: absolute;
+  top: 27px;
+}
+.s-cont h3
+{
+  font-weight: normal;
+  font-size: 30px;
+  margin-top: 10px;
+}
+.s-cont p
+{
+  font-size: 14px;
+}
+.owl-theme .owl-nav
+{
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.owl-carousel .owl-nav button.owl-next
+{
+  background-color:var(--theme-color);
+  opacity: .2;
+}
+.owl-carousel .owl-nav button.owl-prev
+{
+  background-color:var(--theme-color);
+  opacity: .2;
+}
+.owl-carousel .owl-nav button.owl-prev span
+{
+  padding:10px 20px;
+  display: block;
+}
+.owl-carousel .owl-nav button.owl-next span
+{
+  padding:10px 20px;
+  display: block;
+}
+
+
+
+/* OUR BLOG */
+
+.card-top a
+{
+  color: var(--dark-gray);
+}
+.card-top a i
+{
+  color: var(--theme-color);
+}
+.card-body p
+{
+  color: var(--font);
+}
+.btn-blog
+{
+  width: 100px;
+}
+.btn-blog:hover
+{
+  background-color: var(--theme-color);
+  color: var(--dark-white);
+}
+.card-img-blog
+{
+  transition: .4s;
+  overflow: hidden;
+}
+.card-blog:hover .card-img-blog
+{
+  transform: scale(1.2);
+  overflow: hidden;
+}
+.card-body
+{
+  overflow: hidden;
+}
+
+/* SPONSORS section start */
+
+.brand
+{
+  padding: 0 15px;
+}
+
+/* Fotter start */
+
+.fotter
+{
+  background-color:#1a1a1a;
+}
+.f-cont h2
+{
+  font-size: 20px;
+  color: var(--white);
+}
+.f-cont p
+{
+  color: var(--white);
+}
+.quick-menu li a
+{
+  color: var(--white);
+  margin-bottom:10px;
+}
+.pos-img
+{
+  height: 100px;
+  width: 100px;
+  z-index: 44;
+}
+.pos-con a,span
+{
+  color: var(--white);
+}
+.pos-con a
+{
+  font-size: 16px;
+}
+.g-img a img
+{
+  width: 80px;
+  height: 70px;
+  margin: 2px;
+}
+.end-bg
+{
+  background-color: #222222;
+}
+.right
+{
+  color: var(--white);
+}
+.left ul li a
+{
+  color: var(--white);
+  transition: .5s;
+}
+.left ul li a:hover
+{
+  color: var(--theme-color);
+}
+
+
+
+
+
+
+
+
